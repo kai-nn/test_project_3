@@ -1,0 +1,101 @@
+body{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame{
+    height: 400px;
+    width: 300px;
+    background-color: aliceblue;
+    border: 1px solid limegreen;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+h4{
+    margin: 30px 0;
+    text-align: center;
+}
+
+#fileName{
+    margin: 30px 0 0 0;
+    text-align: center;
+}
+
+button{
+    height: 40px;
+    width: 100%;
+    background-color: lightskyblue;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid limegreen;
+
+}
+
+
+/* всплывающее уведомление */
+.notifGreen {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    width: 100%;
+
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    opacity: 0%;
+    background: #327230;
+    z-index: 200;
+    animation: noteOpacity 3s;
+}
+
+.notifRed {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    width: 100%;
+
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    opacity: 0%;
+    background: #ce2a2a;
+    z-index: 200;
+    animation: noteOpacity 3s;
+}
+
+.notifYellow {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    width: 100%;
+
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    opacity: 0%;
+    background: #e7ad1a;
+    z-index: 200;
+    animation: noteOpacity 3s;
+}
+
+@keyframes noteOpacity{
+  0%{
+    opacity: 50%;
+  }
+  70%{
+     opacity: 50%;
+  }
+  100%{
+    opacity: 0%;
+  }
+}

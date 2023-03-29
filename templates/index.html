@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Converter</title>
+    <link rel= "stylesheet" type= "text/css" href="{{url_for('static', filename='index.css')}}">
+</head>
+<body>
+
+    <div class="frame">
+        <h4>Сервис контроля начисления НДФЛ</h4>
+
+        <button id="openBtn" type="button" onclick ="javascript:document.getElementById('file').click();">Открыть файл <img width="30" src="{{url_for('static', filename='icon xlsx.png')}}" alt=''></button>
+        <input
+            accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+            type="file"
+            id="file"
+            style="visibility: hidden;"
+            onchange="getFile(this)"
+        >
+
+        <div id="button_block" style="display: none">
+            <div id="fileName"></div>
+            <button id="sendBtn" type="button" onclick="sendFile()">Отправить <img width="30" src="{{url_for('static', filename='send.png')}}" alt=''></button>
+        </div>
+
+    </div>
+
+    <script src="{{url_for('static', filename='index.js')}}"></script>
+</body>
+</html>
